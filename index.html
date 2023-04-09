@@ -4,23 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA Wings Web Console</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="console-container">
-        <div id="consoleOutput" class="console-output">----- SPA WINGS -----<br><br></div>
+        <div class="tab-container">
+            <div class="tab-item" tabindex="0">
+                <span class="tab-text">Income Balance</span>
+                <div class="close-tab-btn" tabindex="0">x</div>
+            </div>
+            <button class="tab-placeholder">+</button>
+        </div>
+        <div id="contentZ">
+            No CASH<br><br>
+            No VISA<br><br>
+            No Tip HOTEL<br><br>
+            No Tip VISA<br><br>
+            <hr class="separator"><br>
+            CASH to Declare : <span id="cashToDeclare">0</span><br>
+            VISA to Declare : <span id="visaToDeclare">0</span><br>
+            CASH Envelope Admin : <span id="cashEnvelopeAdmin">0</span><br>
+            "FIANZA" Envelope : <span id="cashOnHandEnvelope">500</span>
+        </div>
         <form id="consoleInputForm" class="console-input-form">
             <input id="consoleInput" class="console-input" type="text" autofocus>
+            <button id="helpButton">?</button>
         </form>
-        <div class="buttons">
-            <button onclick="sendCommand('V')">V</button>
-            <button onclick="sendCommand('C')">C</button>
-            <button onclick="sendCommand('T')">T</button>
-            <button onclick="sendCommand('Z')">Z</button>
-            <button onclick="sendCommand('CLS')">CLS</button>
-        </div>
     </div>
-    <script src="app.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/eventListeners.js"></script>
+    <script src="js/moneyIncomeBalance.js"></script>
 </body>
 </html>
-
